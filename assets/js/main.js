@@ -58,6 +58,34 @@
     }
   }
 
+  /* ---------- Stat count-up ---------- */
+  const counters = $$('.stat__num');
+  if (counters.length) {
+    const fmt = (n, dec) => {
+      const parts = n.toFixed(dec).split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');   // thousands separator
+      return parts.join('.');
+    };
+    const runCount = el => {
+      const target = parseFloat(el.dataset.count);
+      const dec = parseInt(el.dataset.decimals || '0', 10);
+      if (isNaN(target)) return;   // count-up runs even under reduced-motion (explicitly requested)
+      const dur = 1700, ease = t => 1 - Math.pow(1 - t, 3);   // ease-out: fast, then settles
+      let start = null;
+      const step = ts => {
+        if (start === null) start = ts;
+        const p = Math.min((ts - start) / dur, 1);
+        el.textContent = fmt(target * ease(p), dec);
+        if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target, dec);
+      };
+      requestAnimationFrame(step);
+    };
+    const cio = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => { if (e.isIntersecting) { runCount(e.target); obs.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(c => cio.observe(c));
+  }
+
   /* ---------- HERO slider ---------- */
   const hero = $('.hero');
   if (hero) {
