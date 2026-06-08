@@ -217,52 +217,54 @@
   // hero background video
   tryVideo($('.hero__video'), () => $('.hero__videowrap')?.classList.add('is-ready'));
 
-  /* ---------- Featured "build-up" tile-lay animation ---------- */
-  const stage = $('.buildup__stage');
-  if (stage) {
+  /* ---------- Featured "build-up" transformations (tile-lay and/or video) ---------- */
+  $$('.buildup__stage').forEach(stage => {
     const grid = $('.buildup__grid', stage);
     const after = stage.dataset.after;
-    let cols = parseInt(stage.dataset.cols || '16', 10);
-    let rows = parseInt(stage.dataset.rows || '9', 10);
-    if (window.innerWidth < 620) { cols = Math.round(cols * 0.7); rows = Math.round(rows * 0.78); }
-    grid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
-    grid.style.gridTemplateRows = `repeat(${rows},1fr)`;
-    const bgSize = `${cols * 100}% ${rows * 100}%`;
-    const SWEEP = 1.4;
-    const denomC = (cols - 1) || 1, denomR = (rows - 1) || 1;
-    for (let r = 0; r < rows; r++) {
-      for (let c = 0; c < cols; c++) {
-        const t = document.createElement('div');
-        t.className = 'buildup__tile';
-        t.style.backgroundImage = `url("${after}")`;
-        t.style.backgroundSize = bgSize;
-        t.style.backgroundPosition = `${(c / denomC) * 100}% ${(r / denomR) * 100}%`;
-        const up = (rows - 1 - r) / denomR;   // bottom row (the road) lays first
-        const lean = c / denomC;              // slight left→right sweep
-        const delay = (up * 0.82 + lean * 0.18) * SWEEP + Math.random() * 0.08;
-        t.style.setProperty('--d', delay.toFixed(3) + 's');
-        grid.appendChild(t);
+    // CSS tile-lay animation — only when a grid + source image are present
+    if (grid && after) {
+      let cols = parseInt(stage.dataset.cols || '16', 10);
+      let rows = parseInt(stage.dataset.rows || '9', 10);
+      if (window.innerWidth < 620) { cols = Math.round(cols * 0.7); rows = Math.round(rows * 0.78); }
+      grid.style.gridTemplateColumns = `repeat(${cols},1fr)`;
+      grid.style.gridTemplateRows = `repeat(${rows},1fr)`;
+      const bgSize = `${cols * 100}% ${rows * 100}%`;
+      const SWEEP = 1.4;
+      const denomC = (cols - 1) || 1, denomR = (rows - 1) || 1;
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const t = document.createElement('div');
+          t.className = 'buildup__tile';
+          t.style.backgroundImage = `url("${after}")`;
+          t.style.backgroundSize = bgSize;
+          t.style.backgroundPosition = `${(c / denomC) * 100}% ${(r / denomR) * 100}%`;
+          const up = (rows - 1 - r) / denomR;   // bottom row (the road) lays first
+          const lean = c / denomC;              // slight left→right sweep
+          const delay = (up * 0.82 + lean * 0.18) * SWEEP + Math.random() * 0.08;
+          t.style.setProperty('--d', delay.toFixed(3) + 's');
+          grid.appendChild(t);
+        }
+      }
+      if (reduce) {
+        stage.classList.add('no-anim', 'played');
+      } else {
+        const play = () => {
+          stage.classList.add('resetting');
+          stage.classList.remove('is-building', 'played');
+          void stage.offsetWidth;
+          stage.classList.remove('resetting');
+          void stage.offsetWidth;
+          stage.classList.add('is-building');
+          setTimeout(() => stage.classList.add('played'), (SWEEP + 0.7) * 1000);
+        };
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => { if (e.isIntersecting) { play(); obs.unobserve(stage); } });
+        }, { threshold: 0.35 });
+        io.observe(stage);
+        $('.buildup__replay', stage)?.addEventListener('click', play);
       }
     }
-    if (reduce) {
-      stage.classList.add('no-anim', 'played');
-    } else {
-      const play = () => {
-        stage.classList.add('resetting');
-        stage.classList.remove('is-building', 'played');
-        void stage.offsetWidth;
-        stage.classList.remove('resetting');
-        void stage.offsetWidth;
-        stage.classList.add('is-building');
-        setTimeout(() => stage.classList.add('played'), (SWEEP + 0.7) * 1000);
-      };
-      const io = new IntersectionObserver((entries, obs) => {
-        entries.forEach(e => { if (e.isIntersecting) { play(); obs.unobserve(stage); } });
-      }, { threshold: 0.35 });
-      io.observe(stage);
-      $('.buildup__replay', stage)?.addEventListener('click', play);
-    }
-    // optional: drop a clip at assets/video/transformation.mp4 to replace the animation
+    // drop-in video for this stage (replaces the animation / poster), scroll-triggered
     tryVideo($('.buildup__video', stage), () => {
       stage.classList.add('has-video');
       const v = $('.buildup__video', stage);
@@ -271,7 +273,7 @@
       }), { threshold: 0.3 });
       vio.observe(v);
     });
-  }
+  });
 
   /* ---------- CONTACT form (Web3Forms) ---------- */
   const form = $('#quote-form');
