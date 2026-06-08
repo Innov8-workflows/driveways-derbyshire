@@ -80,10 +80,13 @@
       };
       requestAnimationFrame(step);
     };
+    const statsWrap = $('.why-stats');
+    let counted = false;
+    const trigger = () => { if (counted) return; counted = true; counters.forEach(runCount); };
     const cio = new IntersectionObserver((entries, obs) => {
-      entries.forEach(e => { if (e.isIntersecting) { runCount(e.target); obs.unobserve(e.target); } });
-    }, { threshold: 0.6 });
-    counters.forEach(c => cio.observe(c));
+      entries.forEach(e => { if (e.isIntersecting) { trigger(); obs.disconnect(); } });
+    }, { threshold: 0.25 });
+    cio.observe(statsWrap || counters[0]);
   }
 
   /* ---------- HERO slider ---------- */
