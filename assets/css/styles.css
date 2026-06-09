@@ -311,10 +311,20 @@ body.menu-open .nav-toggle span::after  { transform: translate(-50%,0) rotate(-4
 .buildup__stage.has-video .buildup__badge { display:none; }
 /* second before/after — centred portrait video panel */
 .buildup--portrait .buildup__stage { aspect-ratio: 3 / 4; max-width: 380px; margin-inline: auto; }
-/* two portrait clips: side-by-side on desktop, stacked on mobile */
-.ba-portrait-row { display:flex; flex-wrap:wrap; gap: clamp(1.2rem,3vw,2.2rem); justify-content:center; align-items:flex-start; max-width:960px; margin-inline:auto; }
-.ba-portrait-row .buildup { margin:0; flex:1 1 340px; max-width:440px; }
-.ba-portrait-row .buildup__stage { max-width:none; }
+/* alternating feature rows: portrait video on one side, copy on the other */
+.ba-feature { display:grid; grid-template-columns: minmax(260px,360px) 1fr; gap: clamp(1.6rem,4vw,3.5rem); align-items:center; max-width:1060px; margin:0 auto clamp(2.5rem,5vw,4rem); }
+.ba-feature--reverse { grid-template-columns: 1fr minmax(260px,360px); }
+.ba-feature--reverse .ba-feature__media { order:2; }
+.ba-feature__media.buildup { margin:0; max-width:none; }
+.ba-feature__media .buildup__stage { max-width:none; margin:0; }
+.ba-feature__text .eyebrow { margin-bottom:.5rem; }
+.ba-feature__text h3 { font-size: clamp(1.4rem,3vw,2rem); line-height:1.15; color:var(--charcoal-3); }
+.ba-feature__text p { color: var(--muted); font-size:1.06rem; margin-top:.9rem; }
+@media (max-width: 820px){
+  .ba-feature, .ba-feature--reverse { grid-template-columns:1fr; max-width:440px; gap:1.2rem; }
+  .ba-feature--reverse .ba-feature__media { order:0; }
+  .ba-feature__text { text-align:center; }
+}
 
 /* ---- Hero background video (optional, auto-activates if a clip is present) ---- */
 .hero__videowrap { position:absolute; inset:0; z-index:-1; opacity:0; transition:opacity .8s var(--ease); }

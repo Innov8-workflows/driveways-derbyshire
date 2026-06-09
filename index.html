@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=4">
 
 <!-- ============================================================
      PLACEHOLDERS TO REPLACE BEFORE GOING LIVE  (search & replace)
@@ -309,22 +309,32 @@
       <p class="buildup__cap"><b>From tired to transformed</b> — watch a driveway come to life.</p>
     </div>
 
-    <!-- Two portrait before/afters: side-by-side on desktop, stacked on mobile -->
-    <div class="ba-portrait-row">
-      <div class="buildup buildup--portrait reveal">
+    <!-- Two portrait before/afters as alternating feature rows: video one side, copy the other -->
+    <div class="ba-feature reveal">
+      <figure class="ba-feature__media buildup buildup--portrait">
         <div class="buildup__stage" aria-label="Patio before and after transformation">
           <img class="buildup__before" src="assets/img/transformation-patio-poster.jpg" alt="Patio before and after transformation" width="960" height="1280">
           <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-patio-poster.jpg" data-src="assets/video/transformation-patio.mp4"></video>
         </div>
-        <p class="buildup__cap"><b>Patio transformation</b> — bare ground to beautiful paving.</p>
+      </figure>
+      <div class="ba-feature__text">
+        <span class="eyebrow">Patio transformation</span>
+        <h3>Bare ground to a flawless patio</h3>
+        <p>We stripped this tired side garden back to a solid, free-draining base, then laid large-format porcelain paving in a clean, contemporary grey — with crisp edges, neat borders and proper falls for drainage. An unused strip became a smart, low-maintenance space the whole family can enjoy, finished in days and built to last.</p>
       </div>
+    </div>
 
-      <div class="buildup buildup--portrait reveal">
+    <div class="ba-feature ba-feature--reverse reveal">
+      <figure class="ba-feature__media buildup buildup--portrait">
         <div class="buildup__stage" aria-label="Driveway before and after transformation">
           <img class="buildup__before" src="assets/img/transformation-2-poster.jpg" alt="Driveway before and after transformation" width="960" height="1280">
           <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-2-poster.jpg" data-src="assets/video/transformation-2.mp4"></video>
         </div>
-        <p class="buildup__cap"><b>Before &amp; after</b> — another tired driveway brought back to life.</p>
+      </figure>
+      <div class="ba-feature__text">
+        <span class="eyebrow">Driveway transformation</span>
+        <h3>A worn-out drive, brought back to life</h3>
+        <p>This cracked, moss-covered driveway was fully excavated and rebuilt on a proper sub-base, then finished with fresh paving, a neat edging course and drainage done right. The result is a hard-wearing, great-looking driveway that lifts the whole front of the home — and keeps its kerb appeal for years to come.</p>
       </div>
     </div>
   </div>
@@ -787,6 +797,6 @@
   <span class="lightbox__cap"></span>
 </div>
 
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
