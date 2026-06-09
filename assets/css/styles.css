@@ -634,7 +634,14 @@ body.menu-open .nav-overlay{ opacity:1; visibility:visible; }
   .to-top{ bottom: 5rem; }
 }
 @media (max-width: 560px){
-  .services-grid{ grid-template-columns:1fr; }
+  /* services: clean 2-up grid with compact cards (quick scan, less scrolling) */
+  .services-grid{ grid-template-columns: repeat(2,1fr); gap:.8rem; }
+  .service-card{ padding:1.25rem 1rem; border-radius:16px; }
+  .service-card__icon{ width:46px; height:46px; margin-bottom:.85rem; border-radius:13px; }
+  .service-card__icon svg{ width:24px; height:24px; }
+  .service-card h3{ font-size:1.02rem; }
+  .service-card p{ font-size:.85rem; }
+  .service-card .more{ font-size:.82rem; margin-top:.7rem; }
   .form-row{ grid-template-columns:1fr; }
   .feature-list{ grid-template-columns:1fr; }
   .why-stats{ grid-template-columns:1fr 1fr; }
