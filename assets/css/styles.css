@@ -311,6 +311,10 @@ body.menu-open .nav-toggle span::after  { transform: translate(-50%,0) rotate(-4
 .buildup__stage.has-video .buildup__badge { display:none; }
 /* second before/after — centred portrait video panel */
 .buildup--portrait .buildup__stage { aspect-ratio: 3 / 4; max-width: 380px; margin-inline: auto; }
+/* two portrait clips: side-by-side on desktop, stacked on mobile */
+.ba-portrait-row { display:flex; flex-wrap:wrap; gap: clamp(1.2rem,3vw,2.2rem); justify-content:center; align-items:flex-start; max-width:960px; margin-inline:auto; }
+.ba-portrait-row .buildup { margin:0; flex:1 1 340px; max-width:440px; }
+.ba-portrait-row .buildup__stage { max-width:none; }
 
 /* ---- Hero background video (optional, auto-activates if a clip is present) ---- */
 .hero__videowrap { position:absolute; inset:0; z-index:-1; opacity:0; transition:opacity .8s var(--ease); }

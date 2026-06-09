@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
 
 <!-- ============================================================
      PLACEHOLDERS TO REPLACE BEFORE GOING LIVE  (search & replace)
@@ -309,22 +309,23 @@
       <p class="buildup__cap"><b>From tired to transformed</b> — watch a driveway come to life.</p>
     </div>
 
-    <!-- Patio before/after: portrait video clip -->
-    <div class="buildup buildup--portrait reveal">
-      <div class="buildup__stage" aria-label="Patio before and after transformation">
-        <img class="buildup__before" src="assets/img/transformation-patio-poster.jpg" alt="Patio before and after transformation" width="960" height="1280">
-        <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-patio-poster.jpg" data-src="assets/video/transformation-patio.mp4"></video>
+    <!-- Two portrait before/afters: side-by-side on desktop, stacked on mobile -->
+    <div class="ba-portrait-row">
+      <div class="buildup buildup--portrait reveal">
+        <div class="buildup__stage" aria-label="Patio before and after transformation">
+          <img class="buildup__before" src="assets/img/transformation-patio-poster.jpg" alt="Patio before and after transformation" width="960" height="1280">
+          <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-patio-poster.jpg" data-src="assets/video/transformation-patio.mp4"></video>
+        </div>
+        <p class="buildup__cap"><b>Patio transformation</b> — bare ground to beautiful paving.</p>
       </div>
-      <p class="buildup__cap"><b>Patio transformation</b> — bare ground to beautiful paving.</p>
-    </div>
 
-    <!-- Second before/after: portrait video clip -->
-    <div class="buildup buildup--portrait reveal">
-      <div class="buildup__stage" aria-label="Driveway before and after transformation">
-        <img class="buildup__before" src="assets/img/transformation-2-poster.jpg" alt="Driveway before and after transformation" width="960" height="1280">
-        <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-2-poster.jpg" data-src="assets/video/transformation-2.mp4"></video>
+      <div class="buildup buildup--portrait reveal">
+        <div class="buildup__stage" aria-label="Driveway before and after transformation">
+          <img class="buildup__before" src="assets/img/transformation-2-poster.jpg" alt="Driveway before and after transformation" width="960" height="1280">
+          <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-2-poster.jpg" data-src="assets/video/transformation-2.mp4"></video>
+        </div>
+        <p class="buildup__cap"><b>Before &amp; after</b> — another tired driveway brought back to life.</p>
       </div>
-      <p class="buildup__cap"><b>Before &amp; after</b> — another tired driveway brought back to life.</p>
     </div>
   </div>
 </section>
@@ -786,6 +787,6 @@
   <span class="lightbox__cap"></span>
 </div>
 
-<script src="assets/js/main.js?v=2"></script>
+<script src="assets/js/main.js?v=3"></script>
 </body>
 </html>
