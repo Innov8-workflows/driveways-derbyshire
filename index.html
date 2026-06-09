@@ -296,17 +296,19 @@
       <p>Watch real driveways transformed — from tired and worn to the finished article, in seconds.</p>
     </div>
 
-    <!-- Featured animated "build-up". Defaults to a scroll-triggered CSS tile-lay;
-         drop a clip at assets/video/transformation.mp4 to upgrade it to a real timelapse / AI video. -->
-    <div class="buildup reveal">
-      <div class="buildup__stage" data-after="assets/img/ba-2-after.jpg" data-cols="16" data-rows="9" aria-label="Animated driveway transformation">
-        <img class="buildup__before" src="assets/img/ba-2-before.jpg" alt="Tired, weathered driveway before installation" width="1280" height="760">
-        <div class="buildup__grid" aria-hidden="true"></div>
-        <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/ba-2-after.jpg" data-src="assets/video/transformation.mp4"></video>
-        <span class="buildup__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 9.5 8.5 3 9l5 4.5L6.5 21 12 17l5.5 4L16 13.5 21 9l-6.5-.5L12 2Z"/></svg> Watch the build</span>
-        <button class="buildup__replay" type="button" aria-label="Replay animation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg> Replay</button>
+    <!-- First before/after: portrait video feature row -->
+    <div class="ba-feature ba-feature--reverse reveal">
+      <figure class="ba-feature__media buildup buildup--portrait">
+        <div class="buildup__stage" aria-label="Driveway before and after transformation">
+          <img class="buildup__before" src="assets/img/transformation-1-poster.jpg" alt="Driveway before and after transformation" width="960" height="1280">
+          <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-1-poster.jpg" data-src="assets/video/transformation-1.mp4"></video>
+        </div>
+      </figure>
+      <div class="ba-feature__text">
+        <span class="eyebrow">Driveway transformation</span>
+        <h3>A driveway transformed from the ground up</h3>
+        <p>What started as a worn, uneven surface was excavated, re-levelled and rebuilt on a solid, free-draining base, then finished in warm-toned block paving with a tidy border and a smooth tarmac apron at the road. The result is a hard-wearing, low-maintenance driveway with standout kerb appeal — done properly, and built to last.</p>
       </div>
-      <p class="buildup__cap"><b>From tired to transformed</b> — watch a driveway come to life.</p>
     </div>
 
     <!-- Two portrait before/afters as alternating feature rows: video one side, copy the other -->
