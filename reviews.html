@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Leave a Review · Driveways Derbyshire</title>
+<meta name="description" content="Thank you for choosing Driveways Derbyshire. Leave us a quick Google or Facebook review — it only takes 30 seconds.">
+<meta name="theme-color" content="#232c31">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#313c43; --charcoal-deep:#232c31; --charcoal-light:#3b4750;
+  --gold:#bd9a59; --gold-2:#a8843f; --gold-soft:#e8dabc;
+  --cream:#f7f5f0; --paper:#fff; --text:#2a2f38; --muted:#69727a; --line:#e5e1d6;
+  --facebook:#1877f2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif; color:var(--text); line-height:1.6;
+  background:linear-gradient(rgba(20,25,28,.82), rgba(20,25,28,.9)), url('assets/img/hero-1-1600.jpg') center/cover fixed no-repeat;
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px 16px;
+}
+.card{ width:100%; max-width:560px; background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden;
+  box-shadow:0 24px 60px -20px rgba(20,25,28,.4), 0 4px 12px rgba(20,25,28,.07); }
+
+/* HEADER */
+.card-head{ position:relative; padding:64px 28px 30px; text-align:center; color:#fff;
+  background:linear-gradient(180deg, rgba(20,25,28,.34) 0%, rgba(20,25,28,.52) 50%, rgba(20,25,28,.8) 80%, rgba(20,25,28,.95) 100%), url('assets/img/hero-1-1600.jpg') center 30%/cover no-repeat; }
+.logo-badge{ display:inline-flex; padding:11px 17px; margin:0 auto 16px; background:#fff; border-radius:14px;
+  box-shadow:0 10px 24px rgba(0,0,0,.28); }
+.logo-badge img{ height:46px; width:88px; object-fit:contain; display:block; }
+.card-head .biz{ font-family:'Sora',sans-serif; font-weight:800; font-size:1.32rem; letter-spacing:-.01em; line-height:1.2;
+  text-shadow:0 1px 14px rgba(0,0,0,.45); }
+.card-head .biz span{ display:block; font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-soft); margin-top:9px; font-family:'Inter',sans-serif; }
+
+/* BODY */
+.card-body{ padding:34px 30px 30px; text-align:center }
+.stars{ font-size:1.6rem; letter-spacing:6px; color:var(--gold); line-height:1; margin-bottom:18px }
+.eyebrow{ display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.26em; text-transform:uppercase; color:var(--gold-2); margin-bottom:12px; font-family:'Sora',sans-serif; }
+h1{ font-family:'Sora',sans-serif; font-weight:800; font-size:2.1rem; line-height:1.1; color:var(--charcoal-deep); margin-bottom:14px; letter-spacing:-.02em; }
+.lead{ font-size:1.02rem; color:var(--text); max-width:42ch; margin:0 auto }
+
+.favour{ margin:28px 0 8px; padding:22px 22px 24px; background:var(--cream); border:1px solid var(--line); border-radius:16px }
+.favour h2{ font-family:'Sora',sans-serif; font-weight:700; font-size:1.3rem; color:var(--charcoal-deep); margin-bottom:8px }
+.favour p{ font-size:.96rem; color:var(--muted) }
+
+/* BUTTONS */
+.btn{ display:flex; align-items:center; justify-content:center; gap:12px; width:100%; padding:17px 22px; margin-top:18px;
+  font-family:'Sora',sans-serif; font-weight:700; font-size:1.04rem; border-radius:12px; border:2px solid transparent;
+  cursor:pointer; text-decoration:none; transition:transform .15s ease, box-shadow .2s ease, background .2s ease; }
+.btn:active{ transform:translateY(1px) }
+.btn-icon{ width:26px; height:26px; flex-shrink:0; background:#fff; border-radius:6px; display:flex; align-items:center; justify-content:center }
+.btn-icon svg{ width:18px; height:18px; display:block }
+.btn-google{ background:var(--charcoal-deep); color:#fff; box-shadow:0 12px 26px -10px rgba(20,25,28,.7) }
+.btn-google:hover{ background:var(--charcoal) }
+.btn-sub{ font-size:.82rem; color:var(--muted); margin-top:11px }
+.btn-facebook{ background:#fff; color:var(--facebook); border-color:#dfe3ea }
+.btn-facebook:hover{ border-color:var(--facebook); background:#f7f9ff }
+.btn-facebook .btn-icon{ background:transparent }
+.btn-facebook .btn-icon svg{ width:26px; height:26px }
+
+/* STEPS */
+.steps{ list-style:none; text-align:left; max-width:380px; margin:22px auto 4px }
+.steps li{ display:flex; align-items:flex-start; gap:14px; padding:11px 0; font-size:.95rem; color:var(--text); border-bottom:1px solid var(--line) }
+.steps li:last-child{ border-bottom:none }
+.steps .num{ flex-shrink:0; width:28px; height:28px; border-radius:50%; background:var(--gold-2); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.86rem; font-family:'Sora',sans-serif }
+
+/* DIVIDER */
+.divider{ display:flex; align-items:center; gap:14px; margin:30px 0 6px; color:var(--muted); font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-family:'Sora',sans-serif }
+.divider::before,.divider::after{ content:""; flex:1; height:1px; background:var(--line) }
+.alt-note{ font-size:.92rem; color:var(--muted); margin-bottom:2px }
+
+/* REASSURANCE */
+.reassure{ margin-top:26px; padding-top:22px; border-top:1px solid var(--line); font-size:.9rem; color:var(--muted) }
+.reassure a{ color:var(--charcoal); font-weight:700; text-decoration:none; white-space:nowrap }
+.reassure a:hover{ text-decoration:underline }
+
+/* FOOTER */
+.card-foot{ padding:18px 24px; text-align:center; background:var(--charcoal-deep); color:#c4cacd; font-size:.78rem; letter-spacing:.02em }
+.card-foot .credit{ display:block; margin-top:6px; color:rgba(196,202,205,.6); font-size:.72rem }
+.card-foot .credit a{ color:#c4cacd; text-decoration:none }
+
+@media (max-width:480px){
+  body{ padding:0 }
+  .card{ border-radius:0; border:none; min-height:100vh; max-width:none; box-shadow:none }
+  h1{ font-size:1.85rem }
+  .card-body{ padding:30px 22px 26px }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-head">
+      <div class="logo-badge"><img src="assets/img/logo-mark.png" alt="Driveways Derbyshire logo"></div>
+      <div class="biz">Driveways Derbyshire
+        <span>Driveway &amp; Paving Specialists · Derbyshire</span>
+      </div>
+    </header>
+
+    <div class="card-body">
+      <div class="stars" aria-label="Five stars">★★★★★</div>
+      <p class="eyebrow">Job Complete</p>
+      <h1>Thank you</h1>
+      <p class="lead">We really appreciate you choosing Driveways Derbyshire. We hope you're delighted with your new driveway.</p>
+
+      <div class="favour">
+        <h2>A quick favour?</h2>
+        <p>We're a small local team, and honest reviews are the number-one way new homeowners decide to trust us. If you've got 30 seconds, a Google review would mean the world.</p>
+
+        <a id="googleBtn" class="btn btn-google" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+              <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+              <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+              <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+            </svg>
+          </span>
+          Leave a Google Review
+        </a>
+        <p class="btn-sub">Opens Google — takes about 30 seconds</p>
+      </div>
+
+      <ol class="steps">
+        <li><span class="num">1</span><span>Tap the button above — it opens our Google page.</span></li>
+        <li><span class="num">2</span><span>Sign in with your Google account if it asks.</span></li>
+        <li><span class="num">3</span><span>Pick 5 stars, add a few words, and hit post. Done!</span></li>
+      </ol>
+
+      <div class="divider">No Google account?</div>
+      <p class="alt-note">No problem — you can leave us a review on Facebook instead. It helps just as much.</p>
+
+      <a id="fbBtn" class="btn btn-facebook" href="#" target="_blank" rel="noopener">
+        <span class="btn-icon">
+          <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </span>
+        Review us on Facebook
+      </a>
+
+      <p class="reassure">Not quite 100% happy? Please give us the chance to put it right first — call <a href="tel:+447700900482">07700&nbsp;900&nbsp;482</a> or <a href="https://wa.me/447700900482" target="_blank" rel="noopener">WhatsApp us</a>.</p>
+    </div>
+
+    <footer class="card-foot">
+      © <span id="year"></span> Driveways Derbyshire · Derbyshire, UK
+      <span class="credit">Website by <a href="https://innov8workflows.co.uk" target="_blank" rel="noopener">Innov8 Workflows</a></span>
+    </footer>
+  </main>
+
+<script>
+  /* ============================================================
+     REVIEW LINKS — paste the business's real links below.
+
+     GOOGLE: Google Business Profile → "Ask for reviews" → copy link
+             (looks like  https://g.page/r/XXXXXXXXXXXX/review ).
+     FACEBOOK: the Facebook Page's reviews tab URL
+             (looks like  https://www.facebook.com/YourPage/reviews ).
+
+     Until set, each button safely falls back to a search so it never breaks.
+     ============================================================ */
+  const GOOGLE_REVIEW_URL   = "PASTE_GOOGLE_REVIEW_LINK_HERE";
+  const FACEBOOK_REVIEW_URL = "PASTE_FACEBOOK_REVIEWS_LINK_HERE";
+
+  const set = (id, url, fallback) => {
+    const a = document.getElementById(id);
+    a.href = (url && !url.startsWith('PASTE_')) ? url : fallback;
+  };
+  set('googleBtn', GOOGLE_REVIEW_URL,
+      "https://www.google.com/search?q=" + encodeURIComponent("Driveways Derbyshire reviews"));
+  set('fbBtn', FACEBOOK_REVIEW_URL,
+      "https://www.facebook.com/search/top?q=" + encodeURIComponent("Driveways Derbyshire"));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
