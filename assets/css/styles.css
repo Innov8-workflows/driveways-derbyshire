@@ -189,14 +189,14 @@ body.menu-open .nav-toggle span::after  { transform: translate(-50%,0) rotate(-4
 @keyframes kenburns { from { transform: scale(1.12); } to { transform: scale(1.0); } }
 @media (prefers-reduced-motion: reduce){ .hero__slide.is-active img { animation: none; transform: scale(1.02);} }
 
-.hero__inner { padding: calc(var(--header-h) + clamp(2.5rem,7vh,4.5rem)) 0 clamp(4rem,8vh,6rem); max-width: 760px; }
-.hero__badge { display:inline-flex; align-items:center; gap:.55rem; background: rgba(189,154,89,.16); border:1px solid rgba(232,218,188,.35); color:#fff; padding:.5rem 1rem; border-radius:999px; font-size:.85rem; font-weight:600; backdrop-filter: blur(4px); margin-bottom:1.4rem; }
-.hero__badge svg{ width:16px;height:16px;color:var(--gold-soft); }
+.hero__inner { padding: calc(var(--header-h) + clamp(2.2rem,6vh,4rem)) 0 clamp(3.5rem,8vh,5.5rem); max-width: 820px; margin-inline: auto; text-align: center; }
+.hero__logo { display:inline-block; background: rgba(255,255,255,.96); padding: clamp(.85rem,2.2vw,1.35rem) clamp(1.1rem,3vw,1.9rem); border-radius: clamp(16px,2.4vw,22px); box-shadow: var(--shadow-lg); margin-bottom: clamp(1.4rem,3vw,2rem); }
+.hero__logo img { width: clamp(200px,34vw,300px); height:auto; max-width:none; }
 .hero h1 { color:#fff; font-size: clamp(2.3rem, 5.4vw, 4rem); line-height:1.05; text-shadow: 0 2px 30px rgba(0,0,0,.35); }
 .hero h1 .accent { color: var(--gold-soft); }
-.hero__sub { color: #e8ecee; font-size: clamp(1.05rem,2vw,1.28rem); margin-top: 1.3rem; max-width: 600px; text-shadow:0 1px 12px rgba(0,0,0,.4); }
-.hero__actions { display:flex; flex-wrap:wrap; gap:1rem; margin-top: 2rem; }
-.hero__trust { display:flex; flex-wrap:wrap; gap:1.3rem 1.8rem; margin-top: 2.4rem; align-items:center; }
+.hero__sub { color: #e8ecee; font-size: clamp(1.05rem,2vw,1.28rem); margin: 1.3rem auto 0; max-width: 620px; text-shadow:0 1px 12px rgba(0,0,0,.4); }
+.hero__actions { display:flex; flex-wrap:wrap; gap:1rem; margin-top: 2rem; justify-content:center; }
+.hero__trust { display:flex; flex-wrap:wrap; gap:1.3rem 1.8rem; margin-top: 2.4rem; align-items:center; justify-content:center; }
 .hero__trust-item { display:inline-flex; align-items:center; gap:.55rem; color:#eef1f2; font-size:.92rem; font-weight:500; }
 .hero__trust-item svg{ width:20px;height:20px;color:var(--gold-soft); flex:none; }
 .hero__stars{ color:var(--gold); letter-spacing:2px; font-size:1.05rem; }
@@ -226,7 +226,7 @@ body.menu-open .nav-toggle span::after  { transform: translate(-50%,0) rotate(-4
 /* ==========================================================================
    Services
    ========================================================================== */
-.services-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:1.1rem; }
+.services-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:1.1rem; }
 .service-card {
   display:block; background:var(--paper); border:1px solid var(--line); border-radius:16px;
   padding:1.5rem 1.3rem; transition: transform var(--t), box-shadow var(--t), border-color var(--t);
