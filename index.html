@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=7">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 
 <!-- ============================================================
      PLACEHOLDERS TO REPLACE BEFORE GOING LIVE  (search & replace)
@@ -284,7 +284,22 @@
       <p>Watch real driveways transformed — from tired and worn to the finished article, in seconds.</p>
     </div>
 
-    <!-- First before/after: portrait video feature row -->
+    <!-- Featured before/after: landscape video, media left -->
+    <div class="ba-feature reveal">
+      <figure class="ba-feature__media buildup buildup--landscape">
+        <div class="buildup__stage" aria-label="Driveway before and after transformation">
+          <img class="buildup__before" src="assets/img/before-after-06-poster.jpg" alt="Driveway before and after transformation" width="1280" height="960">
+          <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/before-after-06-poster.jpg" data-src="assets/video/before-after-06.mp4"></video>
+        </div>
+      </figure>
+      <div class="ba-feature__text">
+        <span class="eyebrow">Driveway transformation</span>
+        <h3>From worn and tired to a flawless new finish</h3>
+        <p>See the difference a proper job makes — this driveway was stripped back, rebuilt on a solid, free-draining sub-base and finished to a crisp, hard-wearing standard. A dated, tired frontage becomes smart, low-maintenance kerb appeal that's built to last.</p>
+      </div>
+    </div>
+
+    <!-- Portrait before/after feature rows: video one side, copy the other -->
     <div class="ba-feature ba-feature--reverse reveal">
       <figure class="ba-feature__media buildup buildup--portrait">
         <div class="buildup__stage" aria-label="Driveway before and after transformation">
@@ -299,7 +314,6 @@
       </div>
     </div>
 
-    <!-- Two portrait before/afters as alternating feature rows: video one side, copy the other -->
     <div class="ba-feature reveal">
       <figure class="ba-feature__media buildup buildup--portrait">
         <div class="buildup__stage" aria-label="Patio before and after transformation">
@@ -325,20 +339,6 @@
         <span class="eyebrow">Driveway transformation</span>
         <h3>A worn-out drive, brought back to life</h3>
         <p>This cracked, moss-covered driveway was fully excavated and rebuilt on a proper sub-base, then finished with fresh paving, a neat edging course and drainage done right. The result is a hard-wearing, great-looking driveway that lifts the whole front of the home — and keeps its kerb appeal for years to come.</p>
-      </div>
-    </div>
-
-    <div class="ba-feature reveal">
-      <figure class="ba-feature__media buildup buildup--portrait">
-        <div class="buildup__stage" aria-label="Block paving driveway before and after transformation">
-          <img class="buildup__before" src="assets/img/transformation-3-poster.jpg" alt="Block paving driveway before and after transformation" width="960" height="1280">
-          <video class="buildup__video" autoplay muted loop playsinline preload="none" poster="assets/img/transformation-3-poster.jpg" data-src="assets/video/transformation-3.mp4"></video>
-        </div>
-      </figure>
-      <div class="ba-feature__text">
-        <span class="eyebrow">Block paving driveway</span>
-        <h3>Block paving with real kerb appeal</h3>
-        <p>Out went the tired old surface, and in went a fully dug-out, compacted base topped with multi-tone block paving in a classic brindle blend. A crisp soldier-course border, a neat tarmac apron and a fresh lawn frame the finish — a driveway that's hard-wearing, easy to maintain and instantly lifts the whole property.</p>
       </div>
     </div>
   </div>
@@ -723,6 +723,6 @@
   <span class="lightbox__cap"></span>
 </div>
 
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

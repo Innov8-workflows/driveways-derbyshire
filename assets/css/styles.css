@@ -311,6 +311,8 @@ body.menu-open .nav-toggle span::after  { transform: translate(-50%,0) rotate(-4
 .buildup__stage.has-video .buildup__badge { display:none; }
 /* second before/after — centred portrait video panel */
 .buildup--portrait .buildup__stage { aspect-ratio: 3 / 4; max-width: 380px; margin-inline: auto; }
+/* featured landscape before/after (4:3 video, sits in the ba-feature media column) */
+.buildup--landscape .buildup__stage { aspect-ratio: 4 / 3; }
 /* alternating feature rows: portrait video on one side, copy on the other */
 .ba-feature { display:grid; grid-template-columns: minmax(260px,360px) 1fr; gap: clamp(1.6rem,4vw,3.5rem); align-items:center; max-width:1060px; margin:0 auto clamp(2.5rem,5vw,4rem); }
 .ba-feature--reverse { grid-template-columns: 1fr minmax(260px,360px); }
